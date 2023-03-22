@@ -15,4 +15,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+          cat multiline| while read testline; do echo "The line is $testline"; done; 
       - run: echo "🍏 This job's status is ${{ job.status }}."
